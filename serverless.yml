@@ -1,0 +1,10 @@
+service: aws-scala-maven
+provider:
+  name: aws
+  runtime: java8
+  profile: aws_mfg
+package:
+  artifact: target/test-dev.jar
+functions:
+  hello:
+    handler: test.Test::handleRequest
